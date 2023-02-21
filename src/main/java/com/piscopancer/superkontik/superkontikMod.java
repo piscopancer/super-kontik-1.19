@@ -1,5 +1,6 @@
 package com.piscopancer.superkontik;
 
+import com.piscopancer.superkontik.items.SuperKontikItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -14,8 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 /** TODO LIST <br>
- * super kontik propaganda hat (2 speakers, blue color, playes advertisement soundtrack)
- *	hey
+ *	super kontik propaganda hat (2 speakers, blue color, playes advertisement soundtrack) <br>
+ *	show who just ate a super kontik
  */
 @Mod(superkontikMod.MOD_ID)
 public class superkontikMod {
@@ -24,7 +25,9 @@ public class superkontikMod {
 	//<editor-fold desc="ITEMS">
 	
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
-	public static final RegistryObject<Item> SUPER_KONTIK_ITEM = ITEMS.register("super_kontik", () -> new Item(new Item.Properties()));
+	
+	// super_kontik
+	public static final RegistryObject<Item> SUPER_KONTIK_ITEM = ITEMS.register("super_kontik", () -> new SuperKontikItem(new Item.Properties()));
 	
 	//</editor-fold>
 	
